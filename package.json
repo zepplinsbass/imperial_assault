@@ -1,8 +1,8 @@
 {
-  "name": "{{project_name}}-frontend",
+  "name": "imperial-assault-frontend",
   "version": "0.0.1",
   "private": true,
-  "description": "{{project_name}} frontend.",
+  "description": "imperial-assault frontend.",
   "main": "index.js",
   "prettier": "eslint-config-vinta/prettier",
   "scripts": {

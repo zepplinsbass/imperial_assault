@@ -2,7 +2,7 @@ version: 2
 
 jobs:
   build:
-    working_directory: ~/{{project_name}}
+    working_directory: ~/imperial-assault
     docker:
       - image: circleci/python:3.7-stretch-node-browsers # remeber to update those!
     steps:
@@ -68,11 +68,11 @@ jobs:
       - run:
           command: (cd backend; python manage.py has_missing_migrations --ignore authtools)
           environment:
-            DJANGO_SETTINGS_MODULE: '{{project_name}}.settings.local_base'
+            DJANGO_SETTINGS_MODULE: 'imperial-assault.settings.local_base'
       - run:
           command: (cd backend; python manage.py check --deploy)
           environment:
-            DJANGO_SETTINGS_MODULE: '{{project_name}}.settings.production'
+            DJANGO_SETTINGS_MODULE: 'imperial-assault.settings.production'
             SECRET_KEY: "$(python -c 'import uuid; print(uuid.uuid4().hex + uuid.uuid4().hex)')"
             DATABASE_URL: 'sqlite:///'
             ALLOWED_HOSTS: '.example.org'

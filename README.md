@@ -37,8 +37,8 @@ This is a good starting point for modern Python/JavaScript web projects.
 In the next steps, always remember to replace theprojectname with your project's name
 - [ ] Above: don't forget the `--extension` and `--name` params!
 - [ ] Change the first line of README to the name of the project
-- [ ] Add an email address to the `ADMINS` settings variable in `{{project_name}}/backend/{{project_name}}/settings/base.py`
-- [ ] Change the `SERVER_EMAIL` to the email address used to send e-mails in `{{project_name}}/backend/{{project_name}}/settings/production.py`
+- [ ] Add an email address to the `ADMINS` settings variable in `imperial-assault/backend/imperial-assault/settings/base.py`
+- [ ] Change the `SERVER_EMAIL` to the email address used to send e-mails in `imperial-assault/backend/imperial-assault/settings/production.py`
 - [ ] Rename the folder `circleci` to `.circleci` with the command `mv circleci .circleci`
 
 After completing ALL of the above, remove this `Project bootstrap` section from the project README. Then follow `Running` below.
@@ -49,8 +49,8 @@ After completing ALL of the above, remove this `Project bootstrap` section from 
 
 ### Setup
 - Inside the `backend` folder, do the following:
-- Create a copy of `{{project_name}}/settings/local.py.example`:  
-  `cp {{project_name}}/settings/local.py.example {{project_name}}/settings/local.py`
+- Create a copy of `imperial-assault/settings/local.py.example`:  
+  `cp imperial-assault/settings/local.py.example imperial-assault/settings/local.py`
 - Create a copy of `.env.example`:
   `cp .env.example .env`
 
@@ -89,9 +89,9 @@ After completing ALL of the above, remove this `Project bootstrap` section from 
 
 #### Setup the backend app
 - Open a new command line window and go to the project's directory.
-- Create a new virtualenv with either [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/) or only virtualenv: `mkvirtualenv {{project_name}}` or `python -m venv {{project_name}}-venv`
+- Create a new virtualenv with either [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/) or only virtualenv: `mkvirtualenv imperial-assault` or `python -m venv imperial-assault-venv`
   > If you're using Python's virtualenv (the latter option), make sure to create the environment with the suggested name, otherwise it will be added to version control.
-- Make sure the virtualenv is activated `workon {{project_name}}` or `source {{project_name}}-venv/bin/activate`
+- Make sure the virtualenv is activated `workon imperial-assault` or `source imperial-assault-venv/bin/activate`
 - Run `make compile_install_requirements` to install the requirements
   > Please make sure you have already setup PostgreSQL on your environment before installing the requirements
 
@@ -109,7 +109,7 @@ After completing ALL of the above, remove this `Project bootstrap` section from 
 
 #### Setup Celery
 - Open a command line window and go to the project's directory
-- `workon {{project_name}}` or `source {{project_name}}-venv/bin/activate` depending on if you are using virtualenvwrapper or just virtualenv.
+- `workon imperial-assault` or `source imperial-assault-venv/bin/activate` depending on if you are using virtualenvwrapper or just virtualenv.
 - `python manage.py celery`
 
 #### Mailhog

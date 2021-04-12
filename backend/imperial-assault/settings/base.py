@@ -18,7 +18,7 @@ SECURE_HSTS_PRELOAD = True
 
 DEBUG = True
 
-ADMINS = (("Admin", "foo@example.com"),)
+ADMINS = (("Admin", "mlassodev@gmail.com"),)
 
 AUTH_USER_MODEL = "users.User"
 
@@ -50,7 +50,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = "{{project_name}}.urls"
+ROOT_URLCONF = "imperial-assault.urls"
 
 TEMPLATES = [
     {
@@ -78,7 +78,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "{{project_name}}.wsgi.application"
+WSGI_APPLICATION = "imperial-assault.wsgi.application"
 
 AUTH_PASSWORD_VALIDATORS = [
     {"NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",},
